@@ -5,5 +5,18 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title Boilerplate
     link(rel="stylesheet" type="text/css" href="style.css")
-  body
-    h1 Gulp boilerplate
+  body.page
+    section.modal
+      form.modal__form
+        button.modal__close(aria-label='Close')
+        h2.modal__heading Log in
+        p.modal__input-group
+          label.visually-hidden(for='email') Email
+          input#email.modal__input(type='email' placeholder='Email' name='email')
+        p.modal__input-group
+          label.visually-hidden(for='password') Email
+          input#password.modal__input(type='password' placeholder='Password' name='password')
+        button.modal__submit.button Authorise me
+        div.modal__links
+          a.modal__link.link(href='#') Go to registration form
+          a.modal__link.link(href='#') Forgot password?
