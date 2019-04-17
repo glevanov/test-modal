@@ -1,13 +1,20 @@
 .button {
-  padding: 13px;
+  background-color: $color-bg-default;
+  border: 1px solid $color-main;
+  border-radius: 90px;
   box-sizing: border-box;
-
+  color: $color-main;
+  cursor: pointer;
   font-size: 16px;
   line-height: normal;
-  color: #237BEF;
+  min-width: 227px;
+  padding: 13px;
+  transition: all 0.3s ease-in;
 
-  border: 1px solid #237BEF;
-  border-radius: 90px;
-
-  background-color: #FFFFFF;
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    color: $color-bg-default;
+    transition: all 0.3s ease-in;
+  }
 }

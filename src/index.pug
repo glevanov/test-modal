@@ -3,7 +3,7 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    title Boilerplate
+    title Login
     link(rel="stylesheet" type="text/css" href="style.css")
   body.page
     section.modal
@@ -13,10 +13,13 @@ html(lang="en")
         p.modal__input-group
           label.visually-hidden(for='email') Email
           input#email.modal__input(type='email' placeholder='Email' name='email')
+          span.modal__decor
         p.modal__input-group
           label.visually-hidden(for='password') Email
           input#password.modal__input(type='password' placeholder='Password' name='password')
+          span.modal__decor
+          span.modal__visibility-toggle
         button.modal__submit.button Authorise me
         div.modal__links
-          a.modal__link.link(href='#') Go to registration form
-          a.modal__link.link(href='#') Forgot password?
+          a.link(href='registration.html') Go to registration form
+          a.link(href='reset.html') Forgot password?

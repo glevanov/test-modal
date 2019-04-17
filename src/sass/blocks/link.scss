@@ -1,6 +1,11 @@
 .link {
+  color: #237BEF;
   font-size: 12px;
   line-height: normal;
   text-decoration: none;
-  color: #237BEF;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
