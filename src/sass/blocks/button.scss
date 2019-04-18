@@ -8,13 +8,35 @@
   font-size: 16px;
   line-height: normal;
   min-width: 227px;
+  outline: none;
   padding: 13px;
-  transition: all 0.3s ease-in;
 
-  &:hover,
-  &:focus {
-    background-color: $color-main;
+  &:disabled {
+    background-color: $color-input-disabled;
+    border-color: $color-input-disabled;
+    box-shadow: none;
     color: $color-bg-default;
-    transition: all 0.3s ease-in;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-error;
+    box-shadow: none;
+    color: $color-bg-default;
+  }
+
+  &--preload {
+    background-color: $color-input-disabled;
+    background-image: url("img/preload.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: $color-input-disabled;
+    box-shadow: none;
+    color: transparent;
+  }
+
+  &:hover:not(&--preload),
+  &:focus:not(&--preload) {
+    box-shadow: 0 0 0 2px $color-main-translucent;
   }
 }

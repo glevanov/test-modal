@@ -1,3 +1,5 @@
+include ./pug/visibility-icon
+
 doctype html
 html(lang="en")
   head
@@ -11,15 +13,16 @@ html(lang="en")
         button.modal__close(aria-label='Close')
         h2.modal__heading Log in
         p.modal__input-group
-          label.visually-hidden(for='email') Email
+          label.modal__label.visually-hidden(for='email') Email
           input#email.modal__input(type='email' placeholder='Email' name='email')
           span.modal__decor
         p.modal__input-group
-          label.visually-hidden(for='password') Email
-          input#password.modal__input(type='password' placeholder='Password' name='password')
+          label.modal__label.visually-hidden(for='password') Password
+          input#password.modal__input(type='password' placeholder='Password' name='password' minlength='8')
           span.modal__decor
-          span.modal__visibility-toggle
+          +visibility-icon('modal__visibility-toggle')
         button.modal__submit.button Authorise me
         div.modal__links
           a.link(href='registration.html') Go to registration form
           a.link(href='reset.html') Forgot password?
+  script(type="text/javascript" src="index.js" async)

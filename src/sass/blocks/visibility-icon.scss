@@ -1,0 +1,19 @@
+.visibility-icon {
+  color: $color-icon;
+  cursor: pointer;
+  fill: currentColor;
+  height: 19px;
+  width: 23px;
+
+  &--disabled {
+    color: $color-icon-disabled;
+  }
+}
+
+.visibility-icon__strike {
+  stroke: currentColor;
+}
+
+.visibility-icon--visible .visibility-icon__strike {
+  stroke: transparent;
+}

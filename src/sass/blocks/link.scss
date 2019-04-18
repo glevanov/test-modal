@@ -1,11 +1,15 @@
 .link {
+  border: 2px solid transparent;
   color: #237BEF;
+  display: block;
   font-size: 12px;
   line-height: normal;
+  padding: 5px;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    border-color: $color-main-translucent;
+    border-radius: 2px;
   }
 }
