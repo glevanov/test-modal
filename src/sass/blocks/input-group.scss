@@ -81,6 +81,11 @@
     color: $color-bg-default;
   }
 
+  &:focus ~ .visibility-icon,
+  &:active ~ .visibility-icon {
+    color: $color-main;
+  }
+
   &:invalid ~ .visibility-icon {
     color: $color-error;
   }
