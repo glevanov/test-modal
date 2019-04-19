@@ -1,9 +1,5 @@
-/* TODO Выпилить из кода modal */
-/* TODO По возможности вынести разметку в миксин */
-/* TODO Проверить возможность стилизовать label через + */
 .input-group {
   display: flex;
-  margin: 0 0 29px;
   position: relative;
   width: 100%;
 }
@@ -29,6 +25,15 @@
   &--disabled {
     color: $color-text-disabled;
   }
+}
+
+.input-group__decor {
+  background-color: $color-accent;
+  bottom: 0;
+  height: 1px;
+  left: -2px;
+  position: absolute;
+  width: calc(100% + 4px);
 }
 
 .input-group__input {
@@ -61,38 +66,28 @@
     border-color: $color-input-disabled;
     color: $color-text-disabled;
   }
+
+  &:focus + .input-group__decor,
+  &:active + .input-group__decor {
+    background-color: $color-main;
+  }
+
+  &:invalid + .input-group__decor {
+    background-color: $color-error;
+  }
+
+  &:invalid + .modal__submit {
+    background-color: $color-error;
+    color: $color-bg-default;
+  }
+
+  &:invalid ~ .visibility-icon {
+    color: $color-error;
+  }
 }
 
-.input-group:invalid ~ .visibility-icon {
-  color: $color-error;
-}
-
-.input-group__decor {
-  background-color: $color-accent;
-  bottom: 0;
-  height: 1px;
-  left: -2px;
-  position: absolute;
-  width: calc(100% + 4px);
-}
-
-.input-group__visibility-toggle {
+.input-group__visibility-icon {
   bottom: 9px;
   position: absolute;
   right: 11px;
-}
-
-/* TODO Перенести под & */
-.input-group__input:focus + .input-group__decor,
-.input-group__input:active + .input-group__decor {
-  background-color: $color-main;
-}
-
-.input-group__input:invalid + .modal__decor {
-  background-color: $color-error;
-}
-
-.input-group__input:invalid + .modal__submit {
-  background-color: $color-error;
-  color: $color-bg-default;
 }

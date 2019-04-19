@@ -10,17 +10,17 @@ html(lang="en")
   body.page
     section.modal
       form.modal__form
-        button.modal__close(aria-label='Close')
+        button.modal__close(aria-label='Close' type='button')
         h2.modal__heading Log in
-        p.modal__input-group
-          label.modal__label.visually-hidden(for='email') Email
-          input#email.modal__input(type='email' placeholder='Email' name='email')
-          span.modal__decor
-        p.modal__input-group
-          label.modal__label.visually-hidden(for='password') Password
-          input#password.modal__input(type='password' placeholder='Password' name='password' minlength='8')
-          span.modal__decor
-          +visibility-icon('modal__visibility-toggle')
+        p.modal__input-group.input-group
+          label.input-group__label.visually-hidden(for='email') Email
+          input#email.input-group__input(type='email' placeholder='Email' name='email')
+          span.input-group__decor
+        p.modal__input-group.input-group
+          label.input-group__label.visually-hidden(for='password') Password
+          input#password.input-group__input(type='password' placeholder='Password' name='password' minlength='8')
+          span.input-group__decor
+          +visibility-icon('input-group__visibility-icon')
         button.modal__submit.button Authorise me
         div.modal__links
           a.link(href='registration.html') Go to registration form

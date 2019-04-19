@@ -1,9 +1,10 @@
-@import "normalize";
+@import "scaffolding/normalize";
 @import "blocks/visually-hidden";
 @import "blocks/fonts";
-@import "variables";
+@import "scaffolding/variables";
 @import "blocks/page";
 @import "blocks/button";
 @import "blocks/modal";
 @import "blocks/link";
 @import "blocks/visibility-icon";
+@import "blocks/input-group";
