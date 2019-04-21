@@ -40,6 +40,10 @@
     }
   }
 
+  &--shake {
+    animation: shake 0.5s;
+  }
+
   &--preload {
     background-color: $color-input-disabled;
     background-image: url("img/preload.svg");
