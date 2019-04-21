@@ -5,25 +5,31 @@
 }
 
 .input-group__label {
-  background-color: $color-bg-default;
   display: block;
-  font-size: 10px;
-  left: 12px;
+  top: 14px;
+  left: 14px;
+  font-size: 14px;
   line-height: normal;
-  padding: 0 3px;
   position: absolute;
-  top: -5px;
+  transition: all 0.2s ease-in;
 
-  &--active {
+  color: $color-text-disabled;
+
+  &--on {
+    padding: 0 3px;
+    top: -5px;
+    left: 12px;
+    background-color: $color-bg-default;
+    font-size: 10px;
+    transition: all 0.2s ease-in;
+  }
+
+  &--correct {
     color: $color-main;
   }
 
   &--error {
     color: $color-error;
-  }
-
-  &--disabled {
-    color: $color-text-disabled;
   }
 }
 
@@ -49,45 +55,38 @@
   padding: 13px;
   width: 100%;
 
-  &::placeholder {
-    color: $color-accent;
-  }
-
-  &:focus,
-  &:active {
+  &--correct {
     border-color: $color-main;
   }
 
-  &:invalid {
+  &--correct + .input-group__decor {
+    background-color: $color-main;
+  }
+
+  &--correct ~ .visibility-icon {
+    color: $color-main;
+  }
+
+  &--error {
     border-color: $color-error;
+  }
+
+  &--error + .input-group__decor {
+    background-color: $color-error;
+  }
+
+  &--error + .modal__submit {
+    background-color: $color-error;
+    color: $color-bg-default;
+  }
+
+  &--error ~ .visibility-icon {
+    color: $color-error;
   }
 
   &:disabled {
     border-color: $color-input-disabled;
     color: $color-text-disabled;
-  }
-
-  &:focus + .input-group__decor,
-  &:active + .input-group__decor {
-    background-color: $color-main;
-  }
-
-  &:invalid + .input-group__decor {
-    background-color: $color-error;
-  }
-
-  &:invalid + .modal__submit {
-    background-color: $color-error;
-    color: $color-bg-default;
-  }
-
-  &:focus ~ .visibility-icon,
-  &:active ~ .visibility-icon {
-    color: $color-main;
-  }
-
-  &:invalid ~ .visibility-icon {
-    color: $color-error;
   }
 }
 

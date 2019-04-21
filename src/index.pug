@@ -15,11 +15,11 @@ html(lang="en")
         h2.modal__heading Log in
         p.modal__input-group.input-group
           label.input-group__label(for='email') Email
-          input#email.input-group__input(type='email' placeholder='Email' name='email')
+          input#email.input-group__input(type='text' name='email')
           span.input-group__decor
         p.modal__input-group.input-group
           label.input-group__label(for='password') Password
-          input#password.input-group__input(type='password' placeholder='Password' name='password' minlength='8')
+          input#password.input-group__input(type='password' name='password')
           span.input-group__decor
           +visibility-icon('input-group__visibility-icon')
         button.modal__submit.button Authorise me

@@ -47,10 +47,10 @@
 
 .modal__close {
   color: $color-bg-default;
+  padding: 10px;
   position: absolute;
   right: -46px;
   top: -3px;
-  padding: 10px;
 
   @media (max-width: 500px) {
     color: $color-text-default;
