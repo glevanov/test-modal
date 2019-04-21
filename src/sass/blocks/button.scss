@@ -10,6 +10,7 @@
   min-width: 227px;
   outline: none;
   padding: 13px;
+  transition: all 0.2s ease-in;
 
   &:hover,
   &:focus {
@@ -31,6 +32,7 @@
     background-color: $color-error;
     border-color: $color-error;
     color: $color-bg-default;
+    transition: all 0.2s ease-in;
 
     &:hover,
     &:focus {
@@ -50,5 +52,11 @@
     &:focus {
       box-shadow: none;
     }
+  }
+
+  &--correct {
+    background-color: $color-main;
+    color: $color-bg-default;
+    transition: all 0.2s ease-in;
   }
 }
