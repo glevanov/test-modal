@@ -1,0 +1,17 @@
+.close-icon {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  fill: currentColor;
+  height: 15px;
+  width: 15px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 500px) {
+    color: $color-text-default;
+  }
+}
