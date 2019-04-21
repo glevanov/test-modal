@@ -6,14 +6,15 @@ const button = form.querySelector('.modal__submit');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
+const inputs = [email, password];
+const labels = Array.from(form.querySelectorAll('.input-group__label'));
+
 const validity = {
   email: false,
   password: false,
 };
 
 const colorInputs = (isValid) => {
-  const inputs = [email, password];
-  const labels = Array.from(form.querySelectorAll('.input-group__label'));
   inputs.forEach(input => input.classList.remove('input-group__input--error'));
   labels.forEach(label => label.classList.remove('input-group__label--error'));
   if (!isValid) {
@@ -53,7 +54,8 @@ const handleSubmit = (evt) => {
 };
 
 const handleInput = (evt, validator, fieldName) => {
-  const value = evt.target.value;
+  const value = evt.target.value.replace(/\s/g, '');
+  evt.target.value = value;
   validity[fieldName] = validator(value);
   handleValidity();
 };
